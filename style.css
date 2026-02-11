@@ -509,6 +509,18 @@ button:focus-visible { outline:none; box-shadow:var(--focus); border-radius:10px
   .map-svg { width:100%; height:100% }
   .node-label.small { font-size:0.7rem; fill: var(--text) }
   .map-node:hover { transform:none; filter:none } /* disable hover on touch */
+
+  /* mobile typography fixes */
+  .home-title { font-size: clamp(2rem, 6vw, 3rem); line-height: 1.2 }
+  .home-sub { font-size: 1.2rem; line-height: 1.4 }
+  .content-body { font-size: 1.2rem; line-height: 1.6; padding: 20px }
+  .card-title { font-size: 1.1rem; line-height: 1.3 }
+  .card-meta { font-size: 0.9rem }
+  .menu-item .title { font-size: 1.1rem }
+  .menu-item .meta { font-size: 0.9rem }
+  .content-title { font-size: 1.3rem }
+  .explore-grid { padding: 20px 10px }
+  .explore-card { padding: 16px }
 }
 
 /* additional utility */
