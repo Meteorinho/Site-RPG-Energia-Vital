@@ -1,14 +1,15 @@
-- [x] Corrigir script.js: Preencher defaultData com dados de data.json (defaultData já é igual a data.json)
-- [x] Remover variáveis não usadas em script.js (não existem mais)
-- [x] Corrigir navegação: previousScreen reset incorreto (corrigido em openContent)
-- [x] Melhorar busca: atualizar explore grid durante digitação (highlightOnInput já faz)
-- [x] Adicionar loading indicator ao carregar dados (já existe)
-- [x] Melhorar mapa: controles de zoom/pan, legenda interativa, animações avançadas, efeitos visuais aprimorados, tooltips detalhados, hover effects, responsividade mobile completa
-- [x] Melhorar acessibilidade: foco em cards dinâmicos (adicionado focus em openContent)
-- [x] Corrigir style.css: remover '#' isolado (corrigido #bg-layers para .bg-layers)
-- [x] Adicionar estilos para loading spinner em style.css (já existe)
-- [x] Adicionar elemento loading em index.html (já existe)
-- [x] Testar carregamento de dados e fallback (server started, data loads correctly)
-- [x] Testar navegação entre telas (navigation works, back buttons functional)
-- [x] Testar busca e mapa em desktop/mobile (search filters menu and explore, map opens and nodes clickable)
-- [x] Verificar acessibilidade (focus management added, ARIA attributes present)
+# Otimização de Performance para Mobile
+
+## CSS Otimizações
+- [x] Reduzir gradientes de estrelas em mobile
+- [x] Simplificar aurora (menos blur)
+- [ ] Desabilitar animações desnecessárias em mobile
+
+## JS Otimizações
+- [x] Adicionar listeners passivos para eventos de toque
+- [x] Simplificar mapa SVG em mobile (menos nós, sem animações)
+- [x] Otimizar drag-to-scroll com passive
+- [ ] Usar requestAnimationFrame para animações
+
+## Testes
+- [ ] Testar no celular após mudanças

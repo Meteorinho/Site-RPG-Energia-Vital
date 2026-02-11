@@ -842,7 +842,7 @@
       exploreGrid.style.cursor = 'grabbing';
       exploreGrid.style.userSelect = 'none';
       lastMoveTime = Date.now();
-    });
+    }, { passive: true });
 
     exploreGrid.addEventListener('pointermove', (e) => {
       if (!isDown) return;
@@ -852,7 +852,7 @@
       exploreGrid.scrollTop = scrollTop - dy;
       exploreGrid.scrollLeft = scrollLeft - dx;
       lastMoveTime = Date.now();
-    });
+    }, { passive: true });
 
     function release(e) {
       if (!isDown) return;
@@ -861,9 +861,9 @@
       exploreGrid.style.cursor = 'grab';
       exploreGrid.style.removeProperty('user-select');
     }
-    exploreGrid.addEventListener('pointerup', release);
-    exploreGrid.addEventListener('pointercancel', release);
-    exploreGrid.addEventListener('pointerleave', release);
+    exploreGrid.addEventListener('pointerup', release, { passive: true });
+    exploreGrid.addEventListener('pointercancel', release, { passive: true });
+    exploreGrid.addEventListener('pointerleave', release, { passive: true });
   })();
 
   /* init */
