@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
+  <meta name="description" content="Guia completo sobre Energia Vital - técnicas, conceitos e conhecimentos do universo de Hunter x Hunter" />
+  <meta name="keywords" content="energia vital, nen, hunter x hunter, técnicas, aura, hatsu" />
+  <meta name="author" content="Guia da Energia Vital" />
+  <meta name="theme-color" content="#b66bff" />
+  <title>🌀 GUIA COMPLETO DA ENERGIA VITAL</title>
+
+  <!-- Preload fonts for better performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌀</text></svg>">
+</head>
+<body>
+  <!-- top controls -->
+  <header class="app-header" role="banner">
+    <div class="left-controls">
+      <button id="menu-btn" aria-label="Abrir menu" aria-expanded="false">☰</button>
+      <h1 class="sr-only">Guia da Energia Vital</h1>
+    </div>
+
+    <div class="center-controls">
+      <div class="branding">
+        <span class="brand-emoji">🌀</span>
+        <span class="brand-title">Guia da Energia Vital</span>
+      </div>
+    </div>
+
+    <div class="right-controls">
+      <button id="theme-toggle" aria-pressed="false" title="Alternar tema">🌙</button>
+      <button id="read-toggle" aria-pressed="false" title="Modo leitura">📘</button>
+      <button id="map-btn" title="Mapa do Conhecimento">🗺️</button>
+    </div>
+  </header>
+
+  <!-- Sidebar / Menu -->
+  <aside id="sidebar" aria-hidden="true" class="closed" role="navigation" aria-label="Menu de seções">
+    <div class="sidebar-header">
+      <h3>Seções</h3>
+      <button id="close-sidebar" aria-label="Fechar menu">✕</button>
+    </div>
+
+    <label class="search-wrapper" for="search">
+      <input id="search" type="search" placeholder="🔎 Buscar (ex: Ren, Gyo, Ten)..." autocomplete="off" />
+    </label>
+
+    <nav id="menu" role="menu" aria-label="Lista de seções"></nav>
+
+
+  </aside>
+
+  <!-- Floating bottom nav for mobile -->
+  <nav id="mobile-nav" class="mobile-nav" aria-hidden="true">
+    <button id="mobile-menu-btn" aria-label="Abrir menu">☰</button>
+    <button id="mobile-search-btn" aria-label="Focar busca">🔎</button>
+    <button id="mobile-map-btn" aria-label="Mapa do Conhecimento">🗺️</button>
+  </nav>
+
+  <!-- Loading indicator -->
+  <div id="loading-indicator" class="loading-indicator hidden" aria-live="polite">
+    <div class="spinner"></div>
+    <p>Carregando dados...</p>
+  </div>
+
+  <main id="app-main" role="main">
+    <!-- Home screen -->
+    <section id="home" class="screen home-screen active" aria-labelledby="home-title">
+      <div class="bg-layers" aria-hidden="true">
+        <div class="aurora"></div>
+        <div class="stars layer1"></div>
+        <div class="stars layer2"></div>
+      </div>
+
+      <div class="home-inner" id="home-inner">
+        <h2 id="home-title" class="home-title">🌀 GUIA COMPLETO DA ENERGIA VITAL</h2>
+        <p class="home-sub">— O DESCONHECIDO —</p>
+        <div class="home-actions">
+          <button class="cta" id="start-btn">Explorar técnicas</button>
+          <button class="cta ghost" id="open-map-cta">Abrir Mapa do Conhecimento</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content screen -->
+    <section id="content" class="screen content-screen hidden" aria-hidden="true">
+      <div class="bg-layers" aria-hidden="true">
+        <div class="aurora"></div>
+        <div class="stars layer1"></div>
+        <div class="stars layer2"></div>
+      </div>
+      <div class="content-top" role="region" aria-label="Cabeçalho do conteúdo">
+        <button id="back-btn" aria-label="Voltar">← Voltar</button>
+        <div id="content-title" class="content-title" aria-live="polite"></div>
+      </div>
+
+      <article id="content-body" class="content-body" tabindex="0" role="article"></article>
+    </section>
+
+    <!-- Explore screen (grid of cards) -->
+    <section id="explore" class="screen explore-screen hidden" aria-hidden="true" aria-labelledby="explore-title">
+      <div class="bg-layers" aria-hidden="true">
+        <div class="aurora"></div>
+        <div class="stars layer1"></div>
+        <div class="stars layer2"></div>
+      </div>
+      <div class="content-top">
+        <button id="explore-back" aria-label="Voltar">← Voltar</button>
+        <h2 id="explore-title" class="content-title">Explorar Técnicas</h2>
+      </div>
+      <div id="explore-grid" class="explore-grid" role="list" style="overflow: auto;"></div>
+    </section>
+  </main>
+
+
+
+  <!-- Mapa do conhecimento (modal) -->
+  <div id="map-modal" class="modal hidden" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-panel map-panel" role="document">
+      <button class="modal-close" aria-label="Fechar">✕</button>
+      <h3>Mapa do Conhecimento</h3>
+      <div id="map-container" class="map-container" aria-hidden="false"></div>
+      <p class="map-hint">Clique em um nó para abrir a seção correspondente.</p>
+    </div>
+  </div>
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>

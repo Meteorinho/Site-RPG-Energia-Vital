@@ -1,0 +1,58 @@
+[
+  {
+    "title": "💠 O que é a Energia Vital?",
+    "kanji": "念",
+    "translation": "Pensamento / Intenção",
+    "rarity": "common",
+    "relations": [1,6],
+    "content": "<p>A Energia Vital (念) significa literalmente 'pensamento', 'atenção' ou 'intenção mental'. É a técnica de controlar e usar a Aura de forma consciente.</p><p>Todo ser vivo possui Aura, mas apenas quem desperta a Energia Vital consegue manipulá-la, moldá-la e transformá-la — para lutar, curar, se proteger ou criar habilidades únicas.</p><p><strong>➡️ Em resumo:</strong> Energia Vital = controle consciente da própria energia para realizar feitos fora do comum.</p>"
+  },
+  {
+    "title": "⚙️ As 4 Técnicas Básicas da Energia Vital",
+    "kanji": "",
+    "translation": "",
+    "rarity": "common",
+    "relations": [2,3,4],
+    "content": "<table><tr><th>Técnica</th><th>Kanji / Nome</th><th>Função</th><th>Como Funciona</th></tr><tr><td>Ten</td><td>纏 (envolver)</td><td>Manter a aura próxima ao corpo.</td><td>Cria uma camada protetora que impede o vazamento de energia e reduz o desgaste físico.</td></tr><tr><td>Zetsu</td><td>絶 (fechar)</td><td>Fechar o fluxo de aura.</td><td>Oculta a presença, mas deixa o usuário vulnerável por parar a circulação.</td></tr><tr><td>Ren</td><td>練 (intensificar)</td><td>Aumentar a aura ao redor do corpo.</td><td>Expande quantidade e intensidade de energia — base para ataques mais fortes.</td></tr><tr><td>Hatsu</td><td>発 (expressar)</td><td>Manifestar a aura individualmente.</td><td>Cada usuário expressa seu poder de acordo com sua natureza interior.</td></tr></table>"
+  },
+  {
+    "title": "🔹 Técnicas Avançadas da Energia Vital",
+    "kanji": "",
+    "translation": "",
+    "rarity": "rare",
+    "relations": [4,5],
+    "content": "<table><tr><th>Técnica</th><th>Kanji / Nome</th><th>Função</th><th>Como Funciona</th></tr><tr><td>Gyo</td><td>凝 (concentrar)</td><td>Focar aura em uma parte específica.</td><td>Aumenta força ou percepção naquela região.</td></tr><tr><td>En</td><td>圓 (círculo)</td><td>Expandir aura ao redor do corpo.</td><td>Cria um campo de detecção — percebe tudo dentro dele.</td></tr><tr><td>Shu</td><td>修 (revestir)</td><td>Envolver objetos com aura.</td><td>Transfere energia para objetos, tornando-os mais resistentes.</td></tr><tr><td>Ko</td><td>硬 (rigidez)</td><td>Concentrar toda aura em um ponto.</td><td>Cria ataques poderosos, porém arriscados.</td></tr><tr><td>Ken</td><td>堅 (fortalecer)</td><td>Manter aura densa e equilibrada.</td><td>Defesa e ataque balanceados para combates prolongados.</td></tr><tr><td>In</td><td>隠 (ocultar)</td><td>Esconder completamente a aura.</td><td>Oculta técnicas e presença espiritual.</td></tr><tr><td>Ryu</td><td>流 (fluxo)</td><td>Controlar o fluxo da aura dinamicamente.</td><td>Move a energia entre partes do corpo conforme a necessidade.</td></tr></table>"
+  },
+  {
+    "title": "🧿 Conceitos e Técnicas Especiais",
+    "kanji": "",
+    "translation": "",
+    "rarity": "rare",
+    "relations": [5],
+    "content": "<table><tr><th>Nome</th><th>Função</th><th>Como Funciona</th></tr><tr><td>Gengu (Juramento e Condição)</td><td>Fortalece a energia vital com restrições autoimpostas.</td><td>Quanto mais arriscada a condição, maior o ganho de poder.</td></tr><tr><td>In + Ko</td><td>Ataque invisível</td><td>Golpe oculto com poder concentrado, difícil de detectar sem percepção específica.</td></tr><tr><td>Shu + Gyo</td><td>Combinação de percepção</td><td>Permite analisar truques e armadilhas de aura, misturando revestimento e foco.</td></tr></table>"
+  },
+  {
+    "title": "🔸 Os 6 Tipos da Energia Vital (Hatsu)",
+    "kanji": "発",
+    "translation": "Expressão / Manifestação",
+    "rarity": "epic",
+    "relations": [2,3],
+    "content": "<table><tr><th>Tipo</th><th>Função</th><th>Como Funciona</th></tr><tr><td>Reforço (Enhancement)</td><td>Aumenta força e resistência.</td><td>Usa aura para fortalecer o corpo ou objetos.</td></tr><tr><td>Emissão (Emission)</td><td>Projeta aura à distância.</td><td>Permite lançar energia sem perder força do corpo principal.</td></tr><tr><td>Manipulação (Manipulation)</td><td>Controla objetos, animais ou pessoas.</td><td>Direciona aura para comandar movimentos externos.</td></tr><tr><td>Transmutação (Transmutation)</td><td>Muda propriedades da aura.</td><td>Faz a aura imitar outras substâncias ou efeitos (ex: eletricidade).</td></tr><tr><td>Conjuração (Conjuration)</td><td>Cria objetos de aura.</td><td>Materializa itens com propriedades próprias.</td></tr><tr><td>Especialização (Specialization)</td><td>Efeitos únicos e imprevisíveis.</td><td>Não se encaixa nas outras categorias; muito particular e variável.</td></tr></table>"
+  },
+  {
+    "title": "🧭 Ordem de Aprendizado",
+    "kanji": "",
+    "translation": "",
+    "rarity": "common",
+    "relations": [],
+    "content": "<ol><li>Abrir os poros da aura (iniciar o treinamento).</li><li>Dominar as 4 técnicas básicas (Ten, Zetsu, Ren, Hatsu).</li><li>Aprender as técnicas avançadas (Gyo, Shu, En, etc.).</li><li>Criar seu Hatsu pessoal.</li><li>Refinar com combinações e restrições (Gengu, Ryu, etc.).</li></ol>"
+  },
+  {
+    "title": "💬 Resumo Geral",
+    "kanji": "",
+    "translation": "",
+    "rarity": "common",
+    "relations": [],
+    "content": "<ul><li>Energia Vital → energia controlada conscientemente.</li><li>4 bases → Ten, Zetsu, Ren, Hatsu.</li><li>Técnicas avançadas → Gyo, En, Shu, Ko, Ken, In, Ryu.</li><li>Tipos → Reforço, Emissão, Manipulação, Transmutação, Conjuração, Especialização.</li></ul>"
+  }
+]
