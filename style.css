@@ -640,3 +640,787 @@ button:focus-visible { outline:none; box-shadow:var(--focus); border-radius:10px
 .card-title:hover {
   color: var(--accent);
 }
+
+/* ========== ENHANCED TABLE STYLING ========== */
+/* Fix for "Função" and "Como Funciona" columns being too close */
+
+.content-body table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 20px 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(182, 107, 255, 0.15);
+}
+
+.content-body th {
+  background: linear-gradient(180deg, rgba(154, 0, 255, 0.25), rgba(110, 0, 230, 0.2));
+  color: #efe7ff;
+  font-family: 'Cinzel Decorative', serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 14px 16px;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 2px solid rgba(182, 107, 255, 0.3);
+  position: relative;
+}
+
+.content-body th:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 20%;
+  height: 60%;
+  width: 1px;
+  background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+}
+
+.content-body td {
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--text);
+  transition: background-color 0.2s ease;
+}
+
+/* Zebra striping */
+.content-body tr:nth-child(even) td {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.content-body tr:nth-child(odd) td {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+/* Hover effect on rows */
+.content-body tbody tr {
+  transition: all 0.25s ease;
+}
+
+.content-body tbody tr:hover td {
+  background: rgba(182, 107, 255, 0.12) !important;
+  box-shadow: inset 0 0 20px rgba(182, 107, 255, 0.08);
+}
+
+.content-body tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* First column (Técnica/Nome/Tipo) - special styling */
+.content-body td:first-child {
+  font-weight: 600;
+  color: var(--accent);
+  min-width: 100px;
+}
+
+/* Add spacing between columns - especially Função and Como Funciona */
+.content-body td:nth-child(3),
+.content-body th:nth-child(3) {
+  padding-left: 24px;
+}
+
+.content-body td:nth-child(4),
+.content-body th:nth-child(4) {
+  padding-left: 24px;
+  border-left: 1px solid rgba(182, 107, 255, 0.1);
+}
+
+/* Light mode table adjustments */
+:root[data-theme="light"] .content-body table {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-color: rgba(255, 140, 0, 0.2);
+}
+
+:root[data-theme="light"] .content-body th {
+  background: linear-gradient(180deg, rgba(255, 140, 0, 0.2), rgba(255, 165, 0, 0.15));
+  color: #2C1810;
+  border-bottom-color: rgba(255, 140, 0, 0.3);
+}
+
+:root[data-theme="light"] .content-body th:not(:last-child)::after {
+  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.1), transparent);
+}
+
+:root[data-theme="light"] .content-body td {
+  color: #2C1810;
+}
+
+:root[data-theme="light"] .content-body tr:nth-child(even) td {
+  background: rgba(255, 248, 220, 0.3);
+}
+
+:root[data-theme="light"] .content-body tr:nth-child(odd) td {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+:root[data-theme="light"] .content-body tbody tr:hover td {
+  background: rgba(255, 140, 0, 0.15) !important;
+}
+
+:root[data-theme="light"] .content-body td:first-child {
+  color: #FF8C00;
+}
+
+:root[data-theme="light"] .content-body td:nth-child(4),
+:root[data-theme="light"] .content-body th:nth-child(4) {
+  border-left-color: rgba(255, 140, 0, 0.15);
+}
+
+/* ========== ENHANCED CARD STYLING ========== */
+
+.explore-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.explore-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.explore-card:hover::before {
+  opacity: 1;
+}
+
+.explore-card .card-icon {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.explore-card:hover .card-icon {
+  transform: scale(1.08);
+  box-shadow: 0 0 20px rgba(182, 107, 255, 0.3);
+}
+
+/* Enhanced button styles */
+.cta {
+  position: relative;
+  overflow: hidden;
+}
+
+.cta::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.4s ease, height 0.4s ease;
+}
+
+.cta:active::after {
+  width: 200px;
+  height: 200px;
+}
+
+/* Enhanced header buttons */
+.app-header button {
+  transition: all 0.2s ease;
+  border-radius: 8px;
+}
+
+.app-header button:hover {
+  background: rgba(182, 107, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Enhanced menu items */
+.menu-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  background: var(--accent);
+  transform: scaleY(0);
+  transition: transform 0.2s ease;
+}
+
+.menu-item:hover::before,
+.menu-item.selected::before {
+  transform: scaleY(1);
+}
+
+/* Enhanced modal */
+.modal-panel {
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Enhanced list styling in content */
+.content-body ol,
+.content-body ul {
+  margin: 16px 0;
+  padding-left: 24px;
+}
+
+.content-body li {
+  margin: 10px 0;
+  padding: 10px 14px;
+  padding-left: 14px;
+  position: relative;
+  border-radius: 8px;
+  background: rgba(182, 107, 255, 0.05);
+  border-left: 3px solid var(--accent);
+  transition: all 0.25s ease;
+}
+
+.content-body li:hover {
+  background: rgba(182, 107, 255, 0.12);
+  transform: translateX(4px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.content-body ol li {
+  list-style-type: decimal;
+  list-style-position: inside;
+  counter-increment: list-counter;
+}
+
+.content-body ol li::before {
+  content: counter(list-counter);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+  color: #fff;
+  border-radius: 50%;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.content-body ul li {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+.content-body ul li::before {
+  content: '✦';
+  margin-right: 10px;
+  color: var(--accent);
+}
+
+.content-body li::marker {
+  color: var(--accent);
+}
+
+/* Enhanced heading styles in content */
+.content-body h2,
+.content-body h3,
+.content-body h4 {
+  font-family: 'Cinzel Decorative', serif;
+  color: var(--accent);
+  margin: 24px 0 12px 0;
+}
+
+/* Enhanced strong text */
+.content-body strong {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Enhanced paragraph styling - merged and improved */
+.content-body p {
+  margin: 16px 0;
+  padding: 14px 18px;
+  background: rgba(182, 107, 255, 0.04);
+  border-radius: 10px;
+  border-left: 3px solid var(--accent);
+  line-height: 1.8;
+  transition: all 0.25s ease;
+}
+
+.content-body p:hover {
+  background: rgba(182, 107, 255, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-body p:first-child {
+  margin-top: 0;
+}
+
+.content-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* Arrow indicator for paragraphs */
+.content-body p::before {
+  content: '➤';
+  margin-right: 10px;
+  color: var(--accent);
+  font-size: 0.85rem;
+}
+
+/* ========== CONTENT BODY BOX STYLING ========== */
+.content-body {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Box decoration - top gradient line */
+.content-body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(182, 107, 255, 0.3) 20%, 
+    var(--accent) 50%, 
+    rgba(182, 107, 255, 0.3) 80%, 
+    transparent 100%
+  );
+  z-index: 1;
+}
+
+/* Box decoration - corner accent */
+.content-body::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle at top right, rgba(182, 107, 255, 0.08), transparent 70%);
+  pointer-events: none;
+}
+
+/* Enhanced content body with glow effect on hover */
+.content-body:hover {
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.7), 
+              0 0 30px rgba(182, 107, 255, 0.1);
+}
+
+/* Inner content spacing */
+.content-body > *:first-child {
+  margin-top: 12px;
+}
+
+/* Enhanced list items in light mode */
+:root[data-theme="light"] .content-body li {
+  background: rgba(255, 140, 0, 0.06);
+  border-left-color: #FF8C00;
+}
+
+:root[data-theme="light"] .content-body li:hover {
+  background: rgba(255, 140, 0, 0.12);
+}
+
+:root[data-theme="light"] .content-body ol li::before {
+  background: linear-gradient(135deg, #FF8C00, #FFD700);
+}
+
+:root[data-theme="light"] .content-body ul li::before {
+  color: #FF8C00;
+}
+
+/* Enhanced paragraph styling in light mode */
+:root[data-theme="light"] .content-body p {
+  background: rgba(255, 140, 0, 0.05);
+  border-left-color: #FF8C00;
+}
+
+:root[data-theme="light"] .content-body p:hover {
+  background: rgba(255, 140, 0, 0.1);
+}
+
+:root[data-theme="light"] .content-body p::before {
+  color: #FF8C00;
+}
+
+/* ========== COMPREHENSIVE MOBILE IMPROVEMENTS ========== */
+@media (max-width: 768px) {
+  /* Reduce padding for mobile */
+  .content-body {
+    padding: 16px;
+  }
+  
+  .content-body table {
+    font-size: 0.8rem;
+    margin: 12px 0;
+  }
+  
+  .content-body th,
+  .content-body td {
+    padding: 8px 10px;
+  }
+  
+  .content-body th {
+    font-size: 0.75rem;
+    padding: 10px 8px;
+  }
+  
+  /* Make table scrollable on mobile */
+  .content-body {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .content-body table {
+    min-width: 450px;
+  }
+  
+  /* Mobile list items - more touch friendly */
+  .content-body li {
+    padding: 12px 14px;
+    margin: 8px 0;
+  }
+  
+  /* Mobile paragraphs */
+  .content-body p {
+    padding: 12px 14px;
+    margin: 12px 0;
+    font-size: 0.95rem;
+  }
+  
+  /* Mobile cards */
+  .explore-card {
+    padding: 12px;
+  }
+  
+  .card-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 1.4rem;
+  }
+  
+  .card-title {
+    font-size: 0.95rem;
+  }
+  
+  /* Mobile header */
+  .app-header {
+    height: 50px;
+    padding: 6px 8px;
+  }
+  
+  .brand-title {
+    font-size: 0.9rem;
+  }
+  
+  .brand-emoji {
+    font-size: 1rem;
+  }
+  
+  /* Mobile home */
+  .home-screen {
+    padding: 80px 16px 16px;
+  }
+  
+  .home-title {
+    font-size: 1.8rem;
+  }
+  
+  .home-sub {
+    font-size: 0.9rem;
+  }
+  
+  .home-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .cta {
+    width: 100%;
+    max-width: 280px;
+    padding: 14px 20px;
+    font-size: 1rem;
+  }
+  
+  /* Mobile content */
+  .content-screen {
+    padding: 70px 12px 12px;
+  }
+  
+  .content-title {
+    font-size: 1.1rem;
+  }
+  
+  /* Mobile sidebar */
+  #sidebar {
+    width: 85vw;
+    max-width: 320px;
+  }
+  
+  /* Mobile menu items */
+  .menu-item {
+    padding: 10px 12px;
+  }
+  
+  .menu-item .title {
+    font-size: 0.95rem;
+  }
+  
+  .menu-item .meta {
+    font-size: 0.75rem;
+  }
+  
+  /* Mobile search */
+  #search {
+    padding: 8px 10px;
+    font-size: 0.9rem;
+  }
+  
+  /* Mobile modal */
+  .modal-panel {
+    padding: 12px;
+    margin: 10px;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  
+  .map-container {
+    height: 300px;
+  }
+  
+  /* Mobile back buttons */
+  #back-btn,
+  #explore-back {
+    top: calc(50px + 8px) !important;
+    padding: 6px 10px;
+    font-size: 0.85rem;
+  }
+  
+  /* Mobile nav */
+  #mobile-nav {
+    bottom: 8px;
+    padding: 6px 12px;
+    gap: 6px;
+  }
+  
+  #mobile-nav button {
+    font-size: 1rem;
+    padding: 8px 12px;
+  }
+  
+  /* Reduce animations on mobile for performance */
+  .explore-card,
+  .menu-item,
+  .cta {
+    transition-duration: 0.15s;
+  }
+  
+  /* Disable some hover effects on mobile */
+  .explore-card:hover {
+    transform: none;
+  }
+  
+  .content-body li:hover {
+    transform: none;
+  }
+  
+  .content-body p:hover {
+    box-shadow: none;
+  }
+  
+  /* Improve touch targets */
+  button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Better text selection on mobile */
+  .content-body {
+    -webkit-user-select: text;
+    user-select: text;
+  }
+  
+  /* Fix for content overflow */
+  .content-body {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 400px) {
+  .home-title {
+    font-size: 1.5rem;
+  }
+  
+  .brand-title {
+    display: none;
+  }
+  
+  .content-body {
+    padding: 12px;
+  }
+  
+  .content-body table {
+    min-width: 380px;
+  }
+}
+
+/* Additional glow effects for theme */
+:root[data-theme="light"] .cta {
+  box-shadow: 0 4px 15px rgba(255, 140, 0, 0.2);
+}
+
+:root[data-theme="light"] .cta:hover {
+  box-shadow: 0 8px 25px rgba(255, 140, 0, 0.35);
+}
+
+/* Better scrollbar for content */
+.content-body::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.content-body::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.content-body::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, rgba(110, 0, 230, 0.3), rgba(90, 0, 210, 0.2));
+  border-radius: 4px;
+}
+
+:root[data-theme="light"] .content-body::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, rgba(255, 140, 0, 0.3), rgba(255, 165, 0, 0.2));
+}
+
+/* Smooth transitions for theme changes */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* ========== PERFORMANCE OPTIMIZATIONS ========== */
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Optimize rendering performance */
+.explore-card,
+.content-body,
+.menu-item,
+.cta,
+button {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* GPU acceleration for animations */
+.explore-card,
+.cta,
+.content-body,
+.modal-panel {
+  transform: translateZ(0);
+}
+
+/* Light mode box styling */
+:root[data-theme="light"] .content-body::before {
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(255, 140, 0, 0.3) 20%, 
+    #FF8C00 50%, 
+    rgba(255, 140, 0, 0.3) 80%, 
+    transparent 100%
+  );
+}
+
+:root[data-theme="light"] .content-body::after {
+  background: radial-gradient(circle at top right, rgba(255, 140, 0, 0.08), transparent 70%);
+}
+
+:root[data-theme="light"] .content-body:hover {
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15), 
+              0 0 30px rgba(255, 140, 0, 0.1);
+}
+
+/* ========== ADDITIONAL ACCESSIBILITY IMPROVEMENTS ========== */
+
+/* Focus styles for better accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .content-body {
+    border: 2px solid var(--accent);
+  }
+  
+  .content-body th {
+    border-bottom: 3px solid var(--accent);
+  }
+  
+  .content-body td {
+    border-bottom: 1px solid var(--accent);
+  }
+}
+
+/* Print styles */
+@media print {
+  .app-header,
+  #sidebar,
+  #mobile-nav,
+  .bg-layers,
+  .modal,
+  #back-btn,
+  #explore-back {
+    display: none !important;
+  }
+  
+  .content-body {
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
+  }
+  
+  .content-body p,
+  .content-body li,
+  .content-body th,
+  .content-body td {
+    background: white !important;
+    color: black !important;
+  }
+}
